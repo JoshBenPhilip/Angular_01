@@ -1,0 +1,57 @@
+<p>map-battleground works!</p>
+
+  <div id="stats-table-container" class="stats-table-container">
+    <table>
+      <caption>
+        <h2>Stats Table</h2>
+        <p>Click on a Goblin to see their stats</p>
+      </caption>
+
+      @for (key of statsKeys; track key){
+      <tr>
+        <th>{{ key }}</th>
+        <td>{{ stats[key] }}</td>
+      </tr>
+      }
+    </table>
+  </div>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" (click)="onMapClick($event)"
+>
+  <!-- Background (Grassy Field) -->
+  <rect width="800" height="600" fill="#4a5d23" />
+  
+  <!-- Terrain: Boulders -->
+  <circle cx="237" cy="520" r="20" fill="#7a7a7a" />
+  <circle cx="633" cy="477" r="29" fill="#7a7a7a" />
+  <circle cx="441" cy="454" r="34" fill="#7a7a7a" />
+  <circle cx="573" cy="343" r="27" fill="#7a7a7a" />
+  <circle cx="408" cy="90" r="22" fill="#7a7a7a" />
+  <circle cx="502" cy="63" r="35" fill="#7a7a7a" />
+  <circle cx="602" cy="477" r="48" fill="#7a7a7a" />
+  <circle cx="189" cy="159" r="39" fill="#7a7a7a" />
+  <circle cx="363" cy="266" r="31" fill="#7a7a7a" />
+  <circle cx="374" cy="462" r="35" fill="#7a7a7a" />
+  
+  <!-- Terrain: Winding Stream -->
+  <path d="M0,300 Q200,250 400,300 T800,300" stroke="#4a90e2" stroke-width="40" fill="none" opacity="0.6"/>
+  
+  <!-- Goblins (Each is a single path) -->
+  <path id="goblin_0" d="M372,194 L369,184 L375,189 L379,189 L385,184 L382,194 L384,204 L370,204 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+  <path id="goblin_1" d="M574,157 L571,147 L577,152 L581,152 L587,147 L584,157 L586,167 L572,167 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+  <path id="goblin_2" d="M593,240 L590,230 L596,235 L600,235 L606,230 L603,240 L605,250 L591,250 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+  <path id="goblin_3" d="M454,432 L451,422 L457,427 L461,427 L467,422 L464,432 L466,442 L452,442 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+  <path id="goblin_4" d="M296,370 L293,360 L299,365 L303,365 L309,360 L306,370 L308,380 L294,380 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+  <path id="goblin_5" d="M189,171 L186,161 L192,166 L196,166 L202,161 L199,171 L201,181 L187,181 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+  <path id="goblin_6" d="M329,171 L326,161 L332,166 L336,166 L342,161 L339,171 L341,181 L327,181 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+  <path id="goblin_7" d="M319,421 L316,411 L322,416 L326,416 L332,411 L329,421 L331,431 L317,431 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+  <path id="goblin_8" d="M341,380 L338,370 L344,375 L348,375 L354,370 L351,380 L353,390 L339,390 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+  <path id="goblin_9" d="M534,179 L531,169 L537,174 L541,174 L547,169 L544,179 L546,189 L532,189 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+  <path id="goblin_10" d="M160,448 L157,438 L163,443 L167,443 L173,438 L170,448 L172,458 L158,458 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+  <path id="goblin_11" d="M282,169 L279,159 L285,164 L289,164 L295,159 L292,169 L294,179 L280,179 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+  <path id="goblin_12" d="M395,438 L392,428 L398,433 L402,433 L408,428 L405,438 L407,448 L393,448 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+  <path id="goblin_13" d="M636,117 L633,107 L639,112 L643,112 L649,107 L646,117 L648,127 L634,127 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+  <path id="goblin_14" d="M362,383 L359,373 L365,378 L369,378 L375,373 L372,383 L374,393 L360,393 Z" fill="#2d5a27" stroke="#1a3317" stroke-width="1" />
+</svg>
+
+
+<router-outlet />
